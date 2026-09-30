@@ -1,0 +1,20 @@
+{
+  "name": "luxe-jewels",
+  "version": "1.0.0",
+  "description": "A responsive luxury jewellery storefront demo built with HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  },
+  "dependencies": {
+    "convex": "^1.46.0"
+  }
+}
