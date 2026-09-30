@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXE JEWELS | Luxury Jewellery</title>
+    <meta
+      name="description"
+      content="LUXE JEWELS is a luxury jewellery shopping experience featuring premium rings, necklaces, bracelets, and diamond collections."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-D2OsRJHb.css">
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>Complimentary shipping on orders above ₹25,000</span>
+        <span>New collection arrives this season</span>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container navbar">
+        <a href="index.html" class="brand" aria-label="LUXE JEWELS home">
+          <span class="brand-mark">✦</span>
+          <span class="brand-name">LUXE JEWELS</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link">Categories</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link">Login</a>
+        </nav>
+
+        <div class="action-bar">
+          <a href="products.html" class="icon-btn" aria-label="Wishlist">
+            ♡
+            <span class="badge-count wishlist-count">0</span>
+          </a>
+          <a href="cart.html" class="icon-btn" aria-label="Cart">
+            🛒
+            <span class="badge-count cart-count">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Timeless Craftsmanship</span>
+            <h1>Elegance That Lasts Forever</h1>
+            <p>
+              Discover heirloom-quality jewellery for meaningful moments, crafted in
+              radiant gold, diamonds, and refined silhouettes that celebrate your story.
+            </p>
+            <div class="hero-actions">
+              <a href="products.html" class="btn btn-primary">Shop Now</a>
+              <a href="#featured" class="btn btn-secondary">Explore Collection</a>
+            </div>
+            <div class="hero-highlights">
+              <div class="hero-highlight">
+                <strong>4.9/5</strong>
+                <span>Customer rating</span>
+              </div>
+              <div class="hero-highlight">
+                <strong>12K+</strong>
+                <span>Happy clients</span>
+              </div>
+              <div class="hero-highlight">
+                <strong>48h</strong>
+                <span>Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Luxury jewellery showcase">
+            <div class="hero-card small">
+              <div class="mini-card">
+                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Gold necklace" />
+              </div>
+              <div class="card-meta">
+                <span>Royal Gold</span>
+                <strong>₹18,900</strong>
+              </div>
+            </div>
+            <div class="hero-card main">
+              <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80" alt="Luxury necklace and jewelry" />
+            </div>
+            <div class="hero-badge">
+              <span class="label">New Arrivals</span>
+              <strong>Signature Bridal Edit</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="feature-strip">
+        <div class="container feature-strip-inner">
+          <div class="feature-item">
+            <div class="feature-icon">✦</div>
+            <div>
+              <h4>Certified Quality</h4>
+              <p>Premium artisan finish</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⏱</div>
+            <div>
+              <h4>Fast Dispatch</h4>
+              <p>2-4 day processing</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🔒</div>
+            <div>
+              <h4>Secure Checkout</h4>
+              <p>Demo-safe shopping flow</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🎁</div>
+            <div>
+              <h4>Gift Packaging</h4>
+              <p>Elegant unboxing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Featured Collection</span>
+            <h2>Curated Signature Pieces</h2>
+            <p>Exquisite gold, diamond, and statement jewellery crafted for memorable occasions.</p>
+          </div>
+          <div class="products-grid" id="featured-products-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Fresh In</span>
+            <h2>New Arrivals</h2>
+              <p>Fresh designs curated to elevate every celebration and personal moment.</p>
+          </div>
+          <div class="products-grid" id="new-arrivals-grid"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Best Sellers</span>
+            <h2>Most Loved Designs</h2>
+            <p>Beloved by our customers for their sparkle, comfort, and lasting elegance.</p>
+          </div>
+          <div class="products-grid" id="best-sellers-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Shop by Category</span>
+            <h2>Jewellery Categories</h2>
+            <p>From statement rings to radiant necklaces, find the perfect match for your style.</p>
+          </div>
+          <div class="categories-grid" id="categories-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Why Choose Us</span>
+            <h2>Crafted With Purpose</h2>
+          </div>
+          <div class="categories-grid">
+            <article class="category-card">
+              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Fine craftsmanship" />
+              <div>
+                <h3>Fine Craftsmanship</h3>
+                <p>Hand-finished details and premium material selection in every collection.</p>
+              </div>
+            </article>
+            <article class="category-card">
+              <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=900&q=80" alt="Custom jewellery" />
+              <div>
+                <h3>Custom Styling</h3>
+                <p>Elegant pieces designed to complement both everyday and occasion wear.</p>
+              </div>
+            </article>
+            <article class="category-card">
+              <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Luxury packaging" />
+              <div>
+                <h3>Luxury Packaging</h3>
+                <p>Thoughtful gifting experience with premium unboxing details and care.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Testimonials</span>
+            <h2>Loved by Our Clients</h2>
+          </div>
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="review-head">
+                <div class="review-avatar">AR</div>
+                <div>
+                  <h4>Amrita Rao</h4>
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
+              <p>“The quality and finish are exceptional. The bracelet I ordered feels premium and the packaging was beautifully elegant.”</p>
+            </article>
+            <article class="review-card">
+              <div class="review-head">
+                <div class="review-avatar">VK</div>
+                <div>
+                  <h4>Vikram Khanna</h4>
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
+              <p>“I purchased a ring for my anniversary and it exceeded expectations. The design feels timeless and luxurious.”</p>
+            </article>
+            <article class="review-card">
+              <div class="review-head">
+                <div class="review-avatar">SN</div>
+                <div>
+                  <h4>Sneha Nair</h4>
+                  <div class="stars">★★★★★</div>
+                </div>
+              </div>
+              <p>“Beautiful craftsmanship and super-fast delivery. The jewellery looks even more stunning in person.”</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="newsletter">
+            <div>
+              <span class="eyebrow">Stay connected</span>
+              <h3>Join our private jewellery circle</h3>
+            </div>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully');">
+              <input type="email" placeholder="Enter your email" aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <span class="brand-mark">✦</span>
+              <span class="brand-name" style="color: #fff;">LUXE JEWELS</span>
+            </div>
+            <p>Luxury jewellery for your everyday prestige—crafted with elegance, care, and a timeless sense of beauty.</p>
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <ul class="footer-list">
+              <li><a href="products.html">Rings</a></li>
+              <li><a href="products.html">Necklaces</a></li>
+              <li><a href="products.html">Earrings</a></li>
+              <li><a href="products.html">Bracelets</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul class="footer-list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer-list">
+              <li>hello@luxe-jewels.com</li>
+              <li>+91 98765 43210</li>
+              <li>123 Gold Avenue, Mumbai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 LUXE JEWELS</span>
+          <span>Demo storefront for educational use</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        renderFeaturedProducts();
+      });
+    </script>
+  </body>
+</html>

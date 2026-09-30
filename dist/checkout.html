@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | LUXE JEWELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/checkout-CCPN3O3t.css">
+    <link rel="stylesheet" crossorigin href="/assets/style-D2OsRJHb.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">✦</span>
+          <span class="brand-name">LUXE JEWELS</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link">Categories</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link">Login</a>
+        </nav>
+        <div class="action-bar">
+          <a href="cart.html" class="icon-btn" aria-label="Cart">
+            🛒
+            <span class="badge-count cart-count">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="checkout-layout">
+      <div class="container checkout-grid">
+        <section class="checkout-form">
+          <div class="section-heading" style="margin-bottom: 22px; text-align: left; max-width: none;">
+            <span class="eyebrow">Secure Checkout</span>
+            <h2 style="font-size: clamp(2rem, 3vw, 3rem);">Delivery Details</h2>
+          </div>
+
+          <form id="checkout-form" class="form-grid">
+            <div class="form-two-col">
+              <div class="form-field">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Your full name" />
+              </div>
+              <div class="form-field">
+                <label for="mobile">Mobile Number</label>
+                <input id="mobile" name="mobile" type="tel" placeholder="10-digit mobile number" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" />
+            </div>
+
+            <div class="form-two-col">
+              <div class="form-field">
+                <label for="house">House / Flat Number</label>
+                <input id="house" name="house" type="text" placeholder="House / flat number" />
+              </div>
+              <div class="form-field">
+                <label for="street">Street</label>
+                <input id="street" name="street" type="text" placeholder="Street name" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="area">Area</label>
+              <input id="area" name="area" type="text" placeholder="Area / locality" />
+            </div>
+
+            <div class="form-two-col">
+              <div class="form-field">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" placeholder="City" />
+              </div>
+              <div class="form-field">
+                <label for="state">State</label>
+                <input id="state" name="state" type="text" placeholder="State" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="pincode">Pincode</label>
+              <input id="pincode" name="pincode" type="text" placeholder="6-digit pincode" />
+            </div>
+
+            <div class="payment-panel">
+              <h3>Payment Method</h3>
+              <div class="payment-options">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="UPI / PhonePe" checked />
+                  <span>UPI / PhonePe</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="Cash on Delivery" />
+                  <span>Cash on Delivery</span>
+                </label>
+              </div>
+              <p style="margin-top: 14px; color: var(--muted); font-size: 0.85rem;">Demo mode only: no real payment processing is performed.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 6px;">Place Order</button>
+          </form>
+        </section>
+
+        <aside class="checkout-summary" id="checkout-summary"></aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <span class="brand-mark">✦</span>
+              <span class="brand-name" style="color: #fff;">LUXE JEWELS</span>
+            </div>
+            <p>Secure, luxury-driven shopping experience designed for elegance and simplicity.</p>
+          </div>
+          <div>
+            <h4>Shop</h4>
+            <ul class="footer-list">
+              <li><a href="products.html">Rings</a></li>
+              <li><a href="products.html">Necklaces</a></li>
+              <li><a href="products.html">Earrings</a></li>
+              <li><a href="products.html">Bracelets</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul class="footer-list">
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="footer-list">
+              <li>hello@luxe-jewels.com</li>
+              <li>+91 98765 43210</li>
+              <li>123 Gold Avenue, Mumbai</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 LUXE JEWELS</span>
+          <span>Demo storefront</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

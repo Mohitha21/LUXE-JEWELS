@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | LUXE JEWELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/style-D2OsRJHb.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">✦</span>
+          <span class="brand-name">LUXE JEWELS</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link">Categories</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link active">Login</a>
+        </nav>
+        <div class="action-bar">
+          <a href="cart.html" class="icon-btn" aria-label="Cart">
+            🛒
+            <span class="badge-count cart-count">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-shell">
+      <div class="auth-card">
+        <h1>Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to continue your luxury shopping journey.</p>
+
+        <form id="login-form" class="form-grid">
+          <div class="form-field">
+            <label for="login-email">Email / Phone</label>
+            <input id="login-email" name="email" type="text" placeholder="Enter your email or mobile number" />
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Password</label>
+            <div class="password-wrap">
+              <input id="login-password" name="password" type="password" placeholder="Enter your password" />
+              <button id="login-password-toggle" type="button" class="password-toggle">Show</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox-row">
+              <input type="checkbox" name="remember" />
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="text-link">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+          <div id="auth-message" aria-live="polite"></div>
+        </form>
+
+        <p class="auth-switch">Don’t have an account? <a href="register.html" class="text-link">Create Account</a></p>
+      </div>
+    </main>
+  </body>
+</html>

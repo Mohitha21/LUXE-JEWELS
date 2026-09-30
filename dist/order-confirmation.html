@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation | LUXE JEWELS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const order = getFromStorage('luxeJewelsLatestOrder', null);
+        const container = document.getElementById('confirmation-content');
+        if (!container) return;
+
+        if (!order) {
+          container.innerHTML = `
+            <div class="empty-state">
+              <h3>No order found</h3>
+              <p>There is no recent order in the demo store.</p>
+            </div>
+          `;
+          return;
+        }
+
+        const productList = order.items.map((item) => `${item.name} × ${item.quantity}`).join(', ');
+
+        container.innerHTML = `
+          <div class="confirmation-header">
+            <div class="success-icon">✓</div>
+            <span class="eyebrow">Order Placed Successfully</span>
+            <h1 style="font-family:'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.6rem);">Thank You, ${order.customerName}</h1>
+          </div>
+
+          <div class="order-grid">
+            <div class="order-box"><strong>Order ID</strong><span>${order.orderId}</span></div>
+            <div class="order-box"><strong>Customer Name</strong><span>${order.customerName}</span></div>
+            <div class="order-box"><strong>Products</strong><span>${productList}</span></div>
+            <div class="order-box"><strong>Quantity</strong><span>${order.items.reduce((sum, item) => sum + item.quantity, 0)}</span></div>
+            <div class="order-box" style="grid-column: 1 / -1;"><strong>Delivery Address</strong><span>${order.deliveryAddress.house}, ${order.deliveryAddress.street}, ${order.deliveryAddress.area}, ${order.deliveryAddress.city}, ${order.deliveryAddress.state} - ${order.deliveryAddress.pincode}</span></div>
+            <div class="order-box"><strong>Payment Method</strong><span>${order.paymentMethod}</span></div>
+            <div class="order-box"><strong>Total Amount</strong><span>${formatPrice(order.totalAmount)}</span></div>
+            <div class="order-box"><strong>Estimated Delivery Date</strong><span>${order.estimatedDeliveryDate}</span></div>
+            <div class="order-box"><strong>Demo Verification Code</strong><span>${order.verificationCode}</span></div>
+          </div>
+
+          <div class="confirmation-actions">
+            <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+            <a href="products.html" class="btn btn-secondary">View Orders</a>
+          </div>
+        `;
+      });
+    </script>
+    <link rel="stylesheet" crossorigin href="/assets/style-D2OsRJHb.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">✦</span>
+          <span class="brand-name">LUXE JEWELS</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link">Categories</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <a href="login.html" class="nav-link">Login</a>
+        </nav>
+        <div class="action-bar">
+          <a href="cart.html" class="icon-btn" aria-label="Cart">
+            🛒
+            <span class="badge-count cart-count">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="order-confirmation-box" id="confirmation-content"></div>
+      </div>
+    </main>
+  </body>
+</html>
