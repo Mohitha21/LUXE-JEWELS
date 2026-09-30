@@ -1,4 +1,5 @@
 import { cp } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
@@ -19,13 +20,13 @@ export default defineConfig({
       name: "copy-storefront-assets",
       async closeBundle() {
         await Promise.all(
-          ["js", "images"].map((directory) =>
-            cp(
-              resolve(import.meta.dirname, directory),
-              resolve(import.meta.dirname, "dist", directory),
-              { recursive: true },
-            ),
-          ),
+          ["js", "images"].map((directory) => {
+            const source = resolve(import.meta.dirname, directory);
+            if (!existsSync(source)) return;
+            return cp(source, resolve(import.meta.dirname, "dist", directory), {
+              recursive: true,
+            });
+          }),
         );
       },
     },
